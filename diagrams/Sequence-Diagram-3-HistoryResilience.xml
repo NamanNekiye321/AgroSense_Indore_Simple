@@ -1,0 +1,161 @@
+<mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="880" pageHeight="600" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Background -->
+    <mxCell id="bg" value="" style="fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="880" height="600" as="geometry" />
+    </mxCell>
+
+    <!-- Title -->
+    <mxCell id="title" value="Sequence Diagram 3: Officer Verification &amp; Database Resilience" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="140" y="15" width="600" height="25" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- LIFELINES (5 Clean Lifelines)                                -->
+    <!-- ============================================================ -->
+
+    <!-- 1. Officer -->
+    <mxCell id="ll_off" value="AgriOfficer" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="30" y="55" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_off" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="87" y="100" width="6" height="460" as="geometry" />
+    </mxCell>
+
+    <!-- 2. AgroSenseApp -->
+    <mxCell id="ll_app" value="AgroSenseApp" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="190" y="55" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_app" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="247" y="100" width="6" height="460" as="geometry" />
+    </mxCell>
+
+    <!-- 3. ExpressServer -->
+    <mxCell id="ll_server" value="ExpressServer" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="360" y="55" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_server" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="417" y="100" width="6" height="460" as="geometry" />
+    </mxCell>
+
+    <!-- 4. DatabaseService -->
+    <mxCell id="ll_db" value="DatabaseService" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="530" y="55" width="130" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_db" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="592" y="100" width="6" height="460" as="geometry" />
+    </mxCell>
+
+    <!-- 5. FarmerNotification -->
+    <mxCell id="ll_notify" value="FarmerPortal" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="710" y="55" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_notify" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="767" y="100" width="6" height="460" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- ACTIVATION BARS                                              -->
+    <!-- ============================================================ -->
+    <mxCell id="act_off" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="83" y="125" width="14" height="410" as="geometry" />
+    </mxCell>
+    <mxCell id="act_app" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="243" y="125" width="14" height="410" as="geometry" />
+    </mxCell>
+    <mxCell id="act_server" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="413" y="170" width="14" height="340" as="geometry" />
+    </mxCell>
+    <mxCell id="act_db" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="588" y="220" width="14" height="230" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- MESSAGES                                                     -->
+    <!-- ============================================================ -->
+
+    <!-- 1: Login -->
+    <mxCell id="m1" value="login(badgeId, password)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="97" y="140" as="sourcePoint" />
+        <mxPoint x="243" y="140" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 2: Load Consultations -->
+    <mxCell id="m2" value="getConsultations(tehsil='Indore')" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="257" y="180" as="sourcePoint" />
+        <mxPoint x="413" y="180" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 3: Query DB with Fallback -->
+    <mxCell id="m3" value="queryRecordsWithResilience()" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="427" y="230" as="sourcePoint" />
+        <mxPoint x="588" y="230" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 4: Return DB Records -->
+    <mxCell id="m4" value="return: records[ ] (From MongoDB or In-Memory Buffer)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="588" y="275" as="sourcePoint" />
+        <mxPoint x="427" y="275" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 5: Display List -->
+    <mxCell id="m5" value="display: Pending Advisory Review Queue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="243" y="315" as="sourcePoint" />
+        <mxPoint x="97" y="315" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 6: Select and Verify -->
+    <mxCell id="m6" value="approveSoilAdvisory(consultationId, 'VERIFIED')" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="97" y="360" as="sourcePoint" />
+        <mxPoint x="243" y="360" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 7: Update Status -->
+    <mxCell id="m7" value="updateStatus(id, 'VERIFIED')" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="427" y="390" as="sourcePoint" />
+        <mxPoint x="588" y="390" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 8: Ack Update -->
+    <mxCell id="m8" value="return: success = true" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="588" y="425" as="sourcePoint" />
+        <mxPoint x="427" y="425" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 9: Display Complete -->
+    <mxCell id="m9" value="display: Advisory Verified Successfully" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="243" y="465" as="sourcePoint" />
+        <mxPoint x="97" y="465" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 10: Notify Farmer -->
+    <mxCell id="m10" value="notify: Soil Health Card Verified by District Office" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="257" y="495" as="sourcePoint" />
+        <mxPoint x="767" y="495" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

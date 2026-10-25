@@ -1,0 +1,147 @@
+<mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="720" pageHeight="780" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Background -->
+    <mxCell id="bg" value="" style="fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="720" height="780" as="geometry" />
+    </mxCell>
+
+    <!-- Figure Title -->
+    <mxCell id="title" value="Activity Diagram 1: Farmer Soil Advisory Lifecycle" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="60" y="15" width="600" height="25" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- NODES & ACTIONS (Clean & Simplified)                         -->
+    <!-- ============================================================ -->
+
+    <!-- Start Node -->
+    <mxCell id="node_start" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="345" y="55" width="30" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Act 1: Select Tehsil -->
+    <mxCell id="act_1" value="Select Tehsil &amp; Crop Season&#xa;(Auto-populates NASA Climate Baselines)" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="235" y="115" width="250" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Act 2: Enter Soil Values -->
+    <mxCell id="act_2" value="Enter Laboratory Soil Values&#xa;(N, P, K, pH) &amp; Land Acreage" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="235" y="195" width="250" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Decision 1: Validate -->
+    <mxCell id="dec_1" value="" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="340" y="275" width="40" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Side Error Notice -->
+    <mxCell id="act_invalid" value="Notify Range Anomaly &amp;&#xa;Prompt Input Adjustment" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="500" y="270" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Act 3: ML Inference -->
+    <mxCell id="act_3" value="Execute Random Forest Inference&#xa;(80.0% Validation Accuracy)" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="235" y="355" width="250" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- FORK BAR (Thick Solid Black Line) -->
+    <mxCell id="fork_bar" value="" style="rounded=0;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="100" y="440" width="520" height="6" as="geometry" />
+    </mxCell>
+
+    <!-- Parallel Branch 1: Crop Suitability -->
+    <mxCell id="act_p1" value="Generate Primary &amp; Alternative&#xa;Crop Recommendations" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=10.5;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="70" y="475" width="240" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Parallel Branch 2: Fertilizer Dosage -->
+    <mxCell id="act_p2" value="Compute ICAR Stoichiometric Deficits&#xa;&amp; Scale Fertilizer Bags by Acreage" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=10.5;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="410" y="475" width="250" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- JOIN BAR (Thick Solid Black Line) -->
+    <mxCell id="join_bar" value="" style="rounded=0;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="100" y="555" width="520" height="6" as="geometry" />
+    </mxCell>
+
+    <!-- Act 4: Save & Attach MSP -->
+    <mxCell id="act_4" value="Persist Consultation in MongoDB Ledger&#xa;&amp; Attach Government MSP Benchmark" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="220" y="590" width="280" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Act 5: Render UI -->
+    <mxCell id="act_5" value="Render Diagnostic Card &amp; Fertilizer Schedule on UI" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="210" y="670" width="300" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- End Node -->
+    <mxCell id="node_end_outer" value="" style="ellipse;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="346" y="735" width="28" height="28" as="geometry" />
+    </mxCell>
+    <mxCell id="node_end_inner" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="351" y="740" width="18" height="18" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CONNECTORS                                                   -->
+    <!-- ============================================================ -->
+    <mxCell id="e_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="node_start" target="act_1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_1" target="act_2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_2_dec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_2" target="dec_1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_dec_err" value="[invalid]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=9;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_1" target="act_invalid">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_dec_act3" value="[valid]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=9;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_1" target="act_3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_3_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_3" target="fork_bar">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_fork_p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="190" y="446" as="sourcePoint" />
+        <mxPoint x="190" y="475" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_fork_p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="535" y="446" as="sourcePoint" />
+        <mxPoint x="535" y="475" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_p1_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="190" y="525" as="sourcePoint" />
+        <mxPoint x="190" y="555" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_p2_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="535" y="525" as="sourcePoint" />
+        <mxPoint x="535" y="555" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_join_act4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="360" y="561" as="sourcePoint" />
+        <mxPoint x="360" y="590" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_4_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_4" target="act_5">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_5_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_5" target="node_end_outer">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

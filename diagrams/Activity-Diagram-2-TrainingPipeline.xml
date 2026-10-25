@@ -1,0 +1,172 @@
+<mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="740" pageHeight="780" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Background -->
+    <mxCell id="bg" value="" style="fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="740" height="780" as="geometry" />
+    </mxCell>
+
+    <!-- Figure Title -->
+    <mxCell id="title" value="Activity Diagram 2: Agro-Climatic Data Pipeline &amp; Model Training" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="70" y="15" width="600" height="25" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- NODES & ACTIONS (Clean & Simplified)                         -->
+    <!-- ============================================================ -->
+
+    <!-- Start Node -->
+    <mxCell id="node_start" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="355" y="55" width="30" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- Act 1: Ingest Data -->
+    <mxCell id="act_1" value="Query NASA POWER Climatology API&#xa;&amp; Scrape ICAR Agronomic Guidelines" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="235" y="115" width="270" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Act 2: Synthesize Dataset -->
+    <mxCell id="act_2" value="Synthesize 1,500 Calibrated Observations&#xa;via NumPy &amp; Pandas Dataframe" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="235" y="195" width="270" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Decision 1: Validate -->
+    <mxCell id="dec_1" value="" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="350" y="275" width="40" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Side Error Notice -->
+    <mxCell id="act_invalid" value="Notify Data Ingestion Error &amp;&#xa;Re-query Satellite API" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="525" y="270" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Act 3: Stratified Split -->
+    <mxCell id="act_3" value="Perform 80/20 Stratified Train-Test Split&#xa;&amp; Standardize Soil Features" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="235" y="355" width="270" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- FORK BAR (Thick Solid Black Line) -->
+    <mxCell id="fork_bar" value="" style="rounded=0;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="80" y="440" width="580" height="6" as="geometry" />
+    </mxCell>
+
+    <!-- Parallel Branch 1: Random Forest -->
+    <mxCell id="act_p1" value="Fit Random Forest&#xa;(100 Trees, 80.0% Acc)" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="50" y="475" width="170" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Parallel Branch 2: Extra Trees -->
+    <mxCell id="act_p2" value="Fit Extra Trees&#xa;(100 Trees, 78.5% Acc)" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="285" y="475" width="170" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Parallel Branch 3: Gradient Boosting -->
+    <mxCell id="act_p3" value="Fit Gradient Boosting&#xa;(Shrinkage 0.1, 76.0% Acc)" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=10;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="520" y="475" width="170" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- JOIN BAR (Thick Solid Black Line) -->
+    <mxCell id="join_bar" value="" style="rounded=0;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="80" y="555" width="580" height="6" as="geometry" />
+    </mxCell>
+
+    <!-- Act 4: Select Champion & Serialize -->
+    <mxCell id="act_4" value="Benchmark F1 Scores &amp; Serialize Champion Model&#xa;to indore_crop_model.pkl (80.0% Accuracy)" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="210" y="590" width="320" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Act 5: Deploy Model -->
+    <mxCell id="act_5" value="Deploy Model Artifact to Node.js Subprocess Bridge" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="200" y="670" width="340" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- End Node -->
+    <mxCell id="node_end_outer" value="" style="ellipse;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="356" y="735" width="28" height="28" as="geometry" />
+    </mxCell>
+    <mxCell id="node_end_inner" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;aspect=fixed;" vertex="1" parent="1">
+      <mxGeometry x="361" y="740" width="18" height="18" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- CONNECTORS                                                   -->
+    <!-- ============================================================ -->
+    <mxCell id="e_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="node_start" target="act_1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_1" target="act_2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_2_dec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_2" target="dec_1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_dec_err" value="[invalid]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=9;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_1" target="act_invalid">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_err_loop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_invalid">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="505" y="140" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="615" y="140" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_dec_act3" value="[valid]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=9;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_1" target="act_3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_3_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_3" target="fork_bar">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_fork_p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="135" y="446" as="sourcePoint" />
+        <mxPoint x="135" y="475" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_fork_p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="370" y="446" as="sourcePoint" />
+        <mxPoint x="370" y="475" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_fork_p3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="605" y="446" as="sourcePoint" />
+        <mxPoint x="605" y="475" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_p1_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="135" y="525" as="sourcePoint" />
+        <mxPoint x="135" y="555" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_p2_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="370" y="525" as="sourcePoint" />
+        <mxPoint x="370" y="555" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_p3_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="605" y="525" as="sourcePoint" />
+        <mxPoint x="605" y="555" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_join_act4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="370" y="561" as="sourcePoint" />
+        <mxPoint x="370" y="590" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e_4_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_4" target="act_5">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e_5_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;" edge="1" parent="1" source="act_5" target="node_end_outer">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

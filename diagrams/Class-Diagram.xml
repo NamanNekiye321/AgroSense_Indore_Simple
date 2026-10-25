@@ -1,0 +1,147 @@
+<mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="780" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Canvas Background -->
+    <mxCell id="bg" value="" style="fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="900" height="780" as="geometry" />
+    </mxCell>
+
+    <!-- Document Header -->
+    <mxCell id="title" value="UML Class Diagram — AgroSense Indore Platform" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="200" y="15" width="500" height="25" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- SUPERCLASS: User (Top Center)                                -->
+    <!-- ============================================================ -->
+    <mxCell id="cls_user" value="User&#xa;──────────────────────────────&#xa;- userId: String&#xa;- name: String&#xa;- contactNo: String&#xa;- role: String&#xa;──────────────────────────────&#xa;+ register(): Boolean&#xa;+ login(): Boolean" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="350" y="45" width="200" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="u_body" value="- userId: String&#xa;- name: String&#xa;- contactNo: String&#xa;- role: String&#xa;──────────────────────────────&#xa;+ register(): Boolean&#xa;+ login(): Boolean" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_user">
+      <mxGeometry y="24" width="200" height="96" as="geometry" />
+    </mxCell>
+
+    <!-- INHERITANCE TREE (Hollow Triangle pointing up to User) -->
+    <mxCell id="inh_tri" value="" style="triangle;whiteSpace=wrap;html=1;direction=north;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="443" y="165" width="14" height="12" as="geometry" />
+    </mxCell>
+    <mxCell id="inh_v" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="447" y="177" width="6" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="inh_bar" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="170" y="197" width="560" height="6" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- SUBCLASSES (Extends User)                                    -->
+    <!-- ============================================================ -->
+
+    <!-- SUBCLASS 1: Farmer (Left) -->
+    <mxCell id="cls_farmer" value="Farmer (extends User)&#xa;──────────────────────────────&#xa;- farmerId: String&#xa;- village: String&#xa;- landAreaAcres: Double&#xa;──────────────────────────────&#xa;+ submitSoilData(): Void&#xa;+ requestAdvisory(): Recommendation" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="60" y="220" width="220" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="f_body" value="- farmerId: String&#xa;- village: String&#xa;- landAreaAcres: Double&#xa;──────────────────────────────&#xa;+ submitSoilData(): Void&#xa;+ requestAdvisory(): Recommendation" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_farmer">
+      <mxGeometry y="24" width="220" height="106" as="geometry" />
+    </mxCell>
+
+    <!-- Connect Farmer to Inheritance Bar -->
+    <mxCell id="e_inh_f" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="170" y="220" as="sourcePoint" />
+        <mxPoint x="170" y="200" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- SUBCLASS 2: AgriculturalOfficer (Right) -->
+    <mxCell id="cls_officer" value="AgriculturalOfficer (extends User)&#xa;──────────────────────────────&#xa;- badgeId: String&#xa;- assignedTehsil: String&#xa;──────────────────────────────&#xa;+ verifyAdvisory(): Boolean&#xa;+ inspectDistrictAudit(): Report" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="620" y="220" width="220" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="o_body" value="- badgeId: String&#xa;- assignedTehsil: String&#xa;──────────────────────────────&#xa;+ verifyAdvisory(): Boolean&#xa;+ inspectDistrictAudit(): Report" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_officer">
+      <mxGeometry y="24" width="220" height="106" as="geometry" />
+    </mxCell>
+
+    <!-- Connect Officer to Inheritance Bar -->
+    <mxCell id="e_inh_o" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="730" y="220" as="sourcePoint" />
+        <mxPoint x="730" y="200" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- TehsilRegion (Middle Center) -->
+    <mxCell id="cls_tehsil" value="TehsilRegion&#xa;──────────────────────────────&#xa;- tehsilName: String&#xa;- soilType: String = 'Vertisols'&#xa;- avgRainfallMm: Double&#xa;──────────────────────────────&#xa;+ getBaselineNutrients(): SoilRecord" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="345" y="220" width="210" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="t_body" value="- tehsilName: String&#xa;- soilType: String = 'Vertisols'&#xa;- avgRainfallMm: Double&#xa;──────────────────────────────&#xa;+ getBaselineNutrients(): SoilRecord" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_tehsil">
+      <mxGeometry y="24" width="210" height="106" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- DOMAIN CLASSES (Lower Layer)                                 -->
+    <!-- ============================================================ -->
+
+    <!-- SoilRecord (Lower Left) -->
+    <mxCell id="cls_soil" value="SoilRecord&#xa;──────────────────────────────&#xa;- recordId: String&#xa;- nitrogenN: Double&#xa;- phosphorusP: Double&#xa;- potassiumK: Double&#xa;- soilPh: Double&#xa;──────────────────────────────&#xa;+ validateRanges(): Boolean" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="60" y="420" width="220" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="s_body" value="- recordId: String&#xa;- nitrogenN: Double&#xa;- phosphorusP: Double&#xa;- potassiumK: Double&#xa;- soilPh: Double&#xa;──────────────────────────────&#xa;+ validateRanges(): Boolean" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_soil">
+      <mxGeometry y="24" width="220" height="116" as="geometry" />
+    </mxCell>
+
+    <!-- Recommendation (Center Core) -->
+    <mxCell id="cls_rec" value="Recommendation&#xa;──────────────────────────────&#xa;- recommendationId: String&#xa;- primaryCrop: String&#xa;- confidencePct: Double&#xa;- consultationDate: Date&#xa;──────────────────────────────&#xa;+ predictCrop(): Void&#xa;+ persistToDB(): Boolean" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="345" y="420" width="210" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="r_body" value="- recommendationId: String&#xa;- primaryCrop: String&#xa;- confidencePct: Double&#xa;- consultationDate: Date&#xa;──────────────────────────────&#xa;+ predictCrop(): Void&#xa;+ persistToDB(): Boolean" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_rec">
+      <mxGeometry y="24" width="210" height="116" as="geometry" />
+    </mxCell>
+
+    <!-- FertilizerAdvisory (Bottom Center) -->
+    <mxCell id="cls_fert" value="FertilizerAdvisory&#xa;──────────────────────────────&#xa;- advisoryId: String&#xa;- ureaKgPerAcre: Double&#xa;- dapKgPerAcre: Double&#xa;- mopKgPerAcre: Double&#xa;- totalCostINR: Double&#xa;──────────────────────────────&#xa;+ computeICARDeficit(): Void&#xa;+ scaleByAcreage(acres: Double): Void" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="330" y="620" width="240" height="135" as="geometry" />
+    </mxCell>
+    <mxCell id="fa_body" value="- advisoryId: String&#xa;- ureaKgPerAcre: Double&#xa;- dapKgPerAcre: Double&#xa;- mopKgPerAcre: Double&#xa;- totalCostINR: Double&#xa;──────────────────────────────&#xa;+ computeICARDeficit(): Void&#xa;+ scaleByAcreage(acres: Double): Void" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_fert">
+      <mxGeometry y="24" width="240" height="111" as="geometry" />
+    </mxCell>
+
+    <!-- MandiMarketPrice (Lower Right) -->
+    <mxCell id="cls_mandi" value="MandiMarketPrice&#xa;──────────────────────────────&#xa;- cropName: String&#xa;- governmentMsp: Double&#xa;- mandiRatePerQtl: Double&#xa;──────────────────────────────&#xa;+ getLatestRate(crop): Double" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=24;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontColor=#000000;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="620" y="420" width="220" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="m_body" value="- cropName: String&#xa;- governmentMsp: Double&#xa;- mandiRatePerQtl: Double&#xa;──────────────────────────────&#xa;+ getLatestRate(crop): Double" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=10;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="cls_mandi">
+      <mxGeometry y="24" width="220" height="116" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- ASSOCIATIONS & MULTIPLICITIES                                -->
+    <!-- ============================================================ -->
+
+    <!-- Farmer -> SoilRecord (1 to 1..*) -->
+    <mxCell id="rel_f_soil" value="1&#xa;&#xa;Provides&#xa;&#xa;1..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontFamily=Helvetica;align=center;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cls_farmer" target="cls_soil">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- SoilRecord -> Recommendation (1 to 1) -->
+    <mxCell id="rel_soil_rec" value="1           Analyzed In           1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontFamily=Helvetica;align=center;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cls_soil" target="cls_rec">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Recommendation -> MandiMarketPrice (* to 1) -->
+    <mxCell id="rel_rec_mandi" value="*          References          1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontFamily=Helvetica;align=center;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cls_rec" target="cls_mandi">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Farmer -> TehsilRegion (* to 1) -->
+    <mxCell id="rel_f_tehsil" value="*     Located In     1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontFamily=Helvetica;align=center;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cls_farmer" target="cls_tehsil">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Recommendation -> FertilizerAdvisory (1 to 1 Composition) -->
+    <mxCell id="rel_rec_fert" value="1&#xa;&#xa;Prescribes&#xa;&#xa;1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontFamily=Helvetica;align=center;startArrow=diamond;startFill=1;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cls_rec" target="cls_fert">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

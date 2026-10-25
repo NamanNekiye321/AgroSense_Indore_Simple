@@ -1,0 +1,176 @@
+<mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="840" pageHeight="640" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Background -->
+    <mxCell id="bg" value="" style="fillColor=#ffffff;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="840" height="640" as="geometry" />
+    </mxCell>
+
+    <!-- Title -->
+    <mxCell id="title" value="Sequence Diagram 1: Crop Recommendation &amp; Soil Advisory" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="120" y="15" width="600" height="25" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- LIFELINES (5 Clean Lifelines)                                -->
+    <!-- ============================================================ -->
+
+    <!-- 1. Farmer -->
+    <mxCell id="ll_f" value="Farmer" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="55" width="110" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_f" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="92" y="100" width="6" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- 2. WebClient -->
+    <mxCell id="ll_ui" value="WebClient" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="200" y="55" width="110" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_ui" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="252" y="100" width="6" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- 3. ExpressAPI -->
+    <mxCell id="ll_api" value="ExpressAPI" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="360" y="55" width="120" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_api" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="417" y="100" width="6" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- 4. MLModel -->
+    <mxCell id="ll_ml" value="MLModel (Python)" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="530" y="55" width="130" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_ml" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="592" y="100" width="6" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- 5. MongoDB -->
+    <mxCell id="ll_db" value="MongoDB" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;fontFamily=Helvetica;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="710" y="55" width="100" height="45" as="geometry" />
+    </mxCell>
+    <mxCell id="line_db" value="" style="line;strokeWidth=1.5;fillColor=none;strokeColor=#000000;dashed=1;dashPattern=6 6;direction=south;" vertex="1" parent="1">
+      <mxGeometry x="757" y="100" width="6" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- ACTIVATION BARS                                              -->
+    <!-- ============================================================ -->
+    <mxCell id="act_f" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="88" y="125" width="14" height="440" as="geometry" />
+    </mxCell>
+    <mxCell id="act_ui" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="248" y="125" width="14" height="440" as="geometry" />
+    </mxCell>
+    <mxCell id="act_api" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="413" y="180" width="14" height="340" as="geometry" />
+    </mxCell>
+    <mxCell id="act_ml" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="588" y="230" width="14" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="act_db" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1.5;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="753" y="380" width="14" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- ============================================================ -->
+    <!-- MESSAGES (Clean, Readable & Simple)                          -->
+    <!-- ============================================================ -->
+
+    <!-- 1: Select Tehsil -->
+    <mxCell id="m1" value="selectTehsil('Sanwer')" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="102" y="135" as="sourcePoint" />
+        <mxPoint x="248" y="135" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 2: Auto-fill baseline -->
+    <mxCell id="m2" value="display: Auto-fill NASA Climate &amp; Soil Sliders" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="248" y="165" as="sourcePoint" />
+        <mxPoint x="102" y="165" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 3: Submit -->
+    <mxCell id="m3" value="submitConsultation(N, P, K, pH, Acres)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="102" y="200" as="sourcePoint" />
+        <mxPoint x="248" y="200" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 4: POST /api/recommend -->
+    <mxCell id="m4" value="POST /api/recommend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="262" y="215" as="sourcePoint" />
+        <mxPoint x="413" y="215" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 5: Predict Crop -->
+    <mxCell id="m5" value="predictCrop(soilInputs)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="427" y="240" as="sourcePoint" />
+        <mxPoint x="588" y="240" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 6: Return Crop -->
+    <mxCell id="m6" value="return: crop='Soybean', confidence=94%" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="588" y="295" as="sourcePoint" />
+        <mxPoint x="427" y="295" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 7: Calculate Dosage Self Call -->
+    <mxCell id="m7" value="scaleFertilizerByAcres(2.5 Acres)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;endArrow=block;endFill=1;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="427" y="330" as="sourcePoint" />
+        <mxPoint x="427" y="355" as="targetPoint" />
+        <Array as="points">
+          <mxPoint x="465" y="330" />
+          <mxPoint x="465" y="355" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 8: Save to DB -->
+    <mxCell id="m8" value="saveRecommendation(record)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="427" y="390" as="sourcePoint" />
+        <mxPoint x="753" y="390" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 9: Return recordId -->
+    <mxCell id="m9" value="return: recordId, status=SAVED" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="753" y="435" as="sourcePoint" />
+        <mxPoint x="427" y="435" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 10: Return HTTP 200 -->
+    <mxCell id="m10" value="return: HTTP 200 { crop, fertilizerPlan, msp }" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="413" y="485" as="sourcePoint" />
+        <mxPoint x="262" y="485" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 11: Display Result -->
+    <mxCell id="m11" value="display: Advisory Card &amp; Fertilizer Schedule" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;endFill=0;fontSize=10;fontFamily=Helvetica;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="248" y="525" as="sourcePoint" />
+        <mxPoint x="102" y="525" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

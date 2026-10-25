@@ -58,3 +58,46 @@ const RecommendationSchema = new mongoose.Schema({
 
 // Export this so other files can use it
 module.exports = mongoose.model('Recommendation', RecommendationSchema);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

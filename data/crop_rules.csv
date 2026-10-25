@@ -1,0 +1,7 @@
+crop,primary_season,n_req_kgha,p_req_kgha,k_req_kgha,ph_min,ph_max,min_rain_mm,max_rain_mm,min_temp_c,max_temp_c,govt_msp_2024,duration_days,source
+Soybean,Kharif,25,60,40,6.8,8.0,650,1200,22,35,4892,100,ICAR-IISR Indore Table-1 (25:60:40 NPKS)
+Maize (Corn),Kharif,85,55,40,6.5,7.9,500,1000,20,34,2225,95,Directorate of Agriculture MP Maize Guide
+Wheat,Rabi,100,50,40,7.0,8.2,200,550,12,25,2425,120,RVSKVV Malwa Sharbati Wheat Package
+Gram (Chickpea),Rabi,20,50,30,7.0,8.2,200,550,12,28,5650,110,RVSKVV College of Agriculture Indore Chana Manual
+Onion,Rabi,90,50,80,6.8,8.0,300,750,14,30,1800,115,NHRDF Onion Package of Practices (Malwa)
+Potato,Rabi,110,70,90,6.5,7.8,300,650,14,25,1500,90,CPRI & RVSKVV Potato Production Guide Indore
