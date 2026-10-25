@@ -187,10 +187,3 @@ AgroSense_Indore_Simple/
 
 ---
 
-## 🎯 Key Viva Points
-
-- **Model**: Random Forest Multi-Class Classifier — trained on 7 agro-climatic features, 80.0% accuracy via 5-Fold CV.
-- **Database**: MongoDB (NoSQL) + Mongoose ODM with automatic in-memory fallback if the daemon is offline.
-- **Fertilizer**: ICAR stoichiometric deficit calculation scaled to farmer's land acreage.
-- **Data**: Real NASA POWER satellite averages, ICAR-IISR guidelines, and GOI Soil Health Card benchmarks — not dummy data.
-- **Tehsil Presets**: Selecting a tehsil auto-fills N, P, K, pH, temperature, humidity, and rainfall from NASA POWER 5-year averages.
